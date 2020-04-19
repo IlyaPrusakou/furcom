@@ -1,0 +1,83 @@
+.main_block {
+display: flex;
+justify-content: space-evenly;
+width: 100%;
+margin-bottom: 5px; 
+
+}
+
+.left_block {
+    display: flex;
+    flex-direction: column; 
+    flex-basis: 50%;
+    margin-right: 5px;
+}
+.image {
+    display: block;
+    width: 100%;
+}
+.top_container {
+    display: flex;
+    margin-bottom: 5px;
+
+}
+.bottom_container {
+    display: flex;
+}
+.top_item1{
+    flex-basis: 50%;
+    background-color: burlywood;
+    margin-right: 5px;
+}
+.top_item2{
+    flex-basis: 50%;
+    background-color: hotpink;
+}
+.bottom_item1{
+    flex-basis: 50%;
+    background-color: aqua;
+    margin-right: 5px;
+}
+.bottom_item2{
+    flex-basis: 50%;
+    background-color: gray;
+}
+/* Testing netflex way */
+.wrapper{
+    position: relative;
+    padding-top: 100%;
+}
+.img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    /* animation */
+    transition: .5s ease;
+    backface-visibility: hidden;
+    opacity: 1;
+  }
+  /* animation class */
+  /* .container:hover .image {
+    opacity: 0.3;
+  } */
+  .wrapper:hover .img {
+    opacity: 0.2;
+  }
+  .wrapper:hover .middle {
+    opacity: 0.9;
+  }
+  .middle{
+    transition: .5s ease;
+    opacity: 0;
+  }
+  .text {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+
+
+

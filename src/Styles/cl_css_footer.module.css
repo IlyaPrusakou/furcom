@@ -1,0 +1,26 @@
+.footer {
+    background-color: black;
+    height: 400px;
+    width: 100%;
+}
+.label_text{
+    color: white;
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Roboto Thin';
+    /* position */
+    position: relative;
+    
+    
+}
+.line_label{
+    line-height: 200px;
+}
+.body_container{
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+}
+.flex_item{
+    flex-basis: 33%;
+}

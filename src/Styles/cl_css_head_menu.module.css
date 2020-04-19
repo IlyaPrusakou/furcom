@@ -1,0 +1,12 @@
+.ul_head_menu {
+    display: flex;
+    margin-right: auto;
+    list-style-type: none;
+    align-self: center;
+  }
+
+  .li_head_menu {
+    margin-right: 30px;
+    flex-basis: 20%;
+    white-space: nowrap;
+  }

@@ -1,0 +1,18 @@
+.otest{
+    background-image: url("http://localhost:8080/tile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:150px;
+    height:150px;
+    opacity: 1;
+    transition: .5s ease;
+}
+
+
+.otest:hover{
+    opacity: 0.5;
+}
+
+
+

@@ -1,0 +1,13 @@
+.zpru_main_buttom_generic {
+    border: none;
+    color: white; /* must be redifined inline*/
+    padding: 15px 32px; /* must be calculated*/
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; /* check what does it mean*/
+    font-size: 16px; /* must be redifined inline*/
+}
+
+.zpru_main_buttom_generic:hover {
+
+}

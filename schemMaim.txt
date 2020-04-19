@@ -1,0 +1,127 @@
+﻿<header>
+	<head_menu>
+		<menu_item fontSize = '18' textColor = '#d76d77'>О нас</menu_item>
+		<menu_item fontSize = '18' textColor = '#d76d77'>Каталог</menu_item>
+		<menu_item fontSize = '18' textColor = '#d76d77'>Корзина</menu_item>
+		<menu_item fontSize = '18' textColor = '#d76d77'>Контакты</menu_item>
+	</head_menu>
+	<head_icons>
+		<icons_search></icons_search>
+		<icons_account></icons_account>
+		<icons_cart></icons_cart>
+		<icons_home></icons_home>
+	</head_icons>
+</header>
+<front_image></front_image>
+<label prop.content = "НОВОСТИ"></label>
+<news_block>
+	<main_news></main_news>
+	<secondary_news>
+		<r_top_news></r_top_news>
+		<l_top_news></l_top_news>
+		<r_bot_news></r_bot_news>
+		<l_bot_news></l_bot_news>
+	</secondary_news>
+</news_block>
+<label prop.content = "КАТАЛОГ"></label>
+<catalog_main>
+	<row_cat>
+		<main_item_present></main_item_present>
+		<main_item_present></main_item_present>
+		<main_item_present></main_item_present>
+		<main_item_present></main_item_present>
+	</row_cat>
+	<row_cat>
+		<main_item_present></main_item_present>
+		<main_item_present></main_item_present>
+		<main_item_present></main_item_present>
+		<main_item_present></main_item_present>
+	</row_cat>
+	<row_cat>
+		<main_item_present></main_item_present>
+		<main_item_present></main_item_present>
+		<main_item_present></main_item_present>
+		<main_item_present></main_item_present>
+	</row_cat>
+	<row_cat>
+		<main_item_present></main_item_present>
+		<main_item_present></main_item_present>
+		<main_item_present></main_item_present>
+		<main_item_present></main_item_present>
+	</row_cat>
+	<row_cat>
+		<main_item_present></main_item_present>
+		<main_item_present></main_item_present>
+		<main_item_present></main_item_present>
+		<main_item_present></main_item_present>
+	</row_cat>
+</catalog_main>
+<footer>
+	<foot_logo></foot_logo>
+	<foot_middle>
+		<r_foot_data>
+			<address props.address = {'Республика Беларусь, г. Минск, ул.Веры Хоружей 6, ТЦ Зеркало'}></address>
+			<work_time props.work_time = {['Режим работы', '9:00 - 19:00', 'ПН - выходной']}></work_time>
+			<phone props.phone = {['+375255374360', '+375255374360', '+375255374360']}></phone>
+		</r_foot_data>
+		<c_foot_menu>
+			<menu_item_about_us fontSize = '21' textColor = '#ffffff'>О нас</menu_item_about_us>
+			<menu_item_catalog fontSize = '21' textColor = '#ffffff'>Каталог</menu_item_catalog>
+			<menu_item_cart fontSize = '21' textColor = '#ffffff'>Корзина</menu_item_cart>
+			<menu_item_contact fontSize = '21' textColor = '#ffffff'>Контакты</menu_item_contact>
+		</c_foot_menu>
+		<l_foot_menu>
+			<foot_login_menu>
+				<sign_up_button>Регистрация</sign_up_button>
+				<login_button>Войти</login_button>
+			</foot_login_menu>
+			<foot_ip_info ip_info = 'TEXT'></foot_ip_info>
+		</l_foot_menu>
+	</foot_middle>
+	<foot_bottom>
+		<rendered_line prop.widht = 1px></rendered_line>
+		<soc_netw_menu>
+			<mail_item>
+				<mail_image></mail_image>
+				<mail_label></mail_label>
+			</mail_item>
+			<insta_item>
+				<insta_image></insta_image>
+				<insta_label></insta_label>
+			</insta_item_item>
+			<telegr_item>
+				<telegr_image></telegr_image>
+				<telegr_label></telegr_label>
+			</telegr_item>
+			<whatsup_item>
+				<whatsup_image></whatsup_image>
+				<whatsup_label></whatsup_label>
+			</whatsup_item>
+		</soc_netw_menu>
+	</foot_bottom>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
