@@ -12,7 +12,6 @@ import Head_menu from './Components/Head_menu'*/
 
 const from_news_top_object =  '400px';
 const from_catal_top_object =  '1000px';
-//  test github
 
 
 function App(){
