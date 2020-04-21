@@ -1,6 +1,7 @@
 import React  from 'react';
 import Styles from '../Styles/cl_css_icon_btn.module.css';
-import { Search, Person } from 'react-bootstrap-icons';
+import  { Link } from "react-router-dom";
+
 
 const person_path = 'http://localhost:8080/person6.svg';
 const search_path = 'http://localhost:8080/search.svg';
@@ -15,7 +16,7 @@ function Icon(props){
     }  else if (props.type === 'cart') { 
         return ( <div className = {Styles.cl_css_icon_btn}><a><img className = { Styles.icon_size } src = { cart_path }></img></a></div> );
     } else if (props.type === 'home') {
-        return ( <div className = {Styles.cl_css_icon_btn}><a><img className = { Styles.icon_size } src = { home_path }></img></a></div> );
+        return ( <div className = {Styles.cl_css_icon_btn}><Link to='/'><img className = { Styles.icon_size } src = { home_path }></img></Link></div> );
     }
 }
 

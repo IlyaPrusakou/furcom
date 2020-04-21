@@ -7,6 +7,12 @@ import Catalogue from './Components/Catalogue';
 import Footer from './Components/Footer';
 import NewCatalog from './Components/NewCatalog'; 
 import Style from './Styles/app.module.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 /*import Slide_container from './Components/Slide_container';
 import Head_menu from './Components/Head_menu'*/        
 
@@ -17,18 +23,33 @@ const from_catal_top_object =  '1000px';
 function App(){
   return (
       <div style = {{width:'90%', position:'relative', left:'50%', transform: 'translate(-50%)'}}>
+        <Router>
           <div className = { Style.flex_container }>
             <div className = {Style.flex_container_nest}>
               <Header />
+              <Route path="/" exact = {true} strict = {true}>
               <Slideshow />
               <Label  label = 'Новости' top = { from_news_top_object } />
               <News_block></News_block>
               <Label  label = 'Каталог' top = { from_catal_top_object } />
-              {/* <Catalogue /> */}
               <NewCatalog></NewCatalog>
+              </Route>
+              <Route path='/about' exact = {true} strict = {true}>
+                <div>About</div>
+              </Route>
+              <Route path='/cat' exact = {true} strict = {true}>
+                <div>Catalogue</div>
+              </Route>
+              <Route path='/buy' exact = {true} strict = {true}>
+                <div>Buy</div>
+              </Route>
+              <Route path='/contact' exact = {true} strict = {true}>
+                <div>Contact</div>
+              </Route>
           </div>
           </div>
               <Footer className = { Style.flex_footer } />
+        </Router>
       </div>);
 }
 

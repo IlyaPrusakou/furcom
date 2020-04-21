@@ -1,14 +1,7 @@
 import React  from 'react';
 import styled from 'styled-components';
 
-// local style object
-const lo_ul_style = {
-    width:'70%',
-    marginLeft:'auto',
-    marginRight:'auto',
-    fontFamily: 'Roboto Thin',
-    listStyleType: 'none'
-};
+
 const lo_div_text = {
     textAlign:'center',
     fontFamily: 'Roboto Thin',

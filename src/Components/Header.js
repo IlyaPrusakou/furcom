@@ -12,7 +12,7 @@ function Header(){
         <div className = {Styles.right_buffer}></div>
         <Head_menu />
         <Head_icons/>
-        <div className = {Styles.right_buffer}></div>
+        <div className = {Styles.left_buffer}></div>
     </div> );
 }
 

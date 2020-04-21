@@ -6,38 +6,27 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import styled from 'styled-components';
 
-const label_array = ['о нас','каталог','корзины','контакты'];
+const label_array = [{text:'о нас', path:'about'},{text:'каталог', path:'cat'},{text:'корзина', path:'buy'},{text:'контакты', path:'contact'}];
 
 function Head_menu() {
   return (
-    <Container fluid = { true }>
-      <Row style = {{width:'100%'}}>
+    <Container>
+      <Row style = {{width:'100%', flexWrap: 'nowrap'}}>
         <Col lg = {2}>
-        <Menu_item text = { label_array[0] }></Menu_item>
+        <Menu_item cont = { label_array[0] }></Menu_item>
         </Col>
         <Col lg = {2}>
-        <Menu_item text = { label_array[1] }></Menu_item>
+        <Menu_item cont = { label_array[1] }></Menu_item>
         </Col>
         <Col lg = {2}>
-        <Menu_item text = { label_array[2] }></Menu_item>
+        <Menu_item cont = { label_array[2] }></Menu_item>
         </Col>
         <Col lg = {2}>
-        <Menu_item text = { label_array[3] }></Menu_item>
+        <Menu_item cont = { label_array[3] }></Menu_item>
         </Col>
       </Row>
   </Container> )
   };
-
-
-// function Head_menu() {
-// return (
-// <ul className = {Styles.ul_head_menu}>
-//   <li className = {Styles.li_head_menu}><Menu_item text = { label_array[0] } /></li>
-//   <li className = {Styles.li_head_menu}><Menu_item text = { label_array[1] } /></li>
-//   <li className = {Styles.li_head_menu}><Menu_item text = { label_array[2] } /></li>
-//   <li className = {Styles.li_head_menu}><Menu_item text = { label_array[3] } /></li>
-// </ul> );
-// };
 
 export default Head_menu;
 

@@ -10,5 +10,8 @@
     justify-content: space-around;
 }
 .right_buffer {
-    flex-basis: 5%;
+    flex-basis: 15%;
+}
+.left_buffer {
+    flex-basis: 5%; 
 }
