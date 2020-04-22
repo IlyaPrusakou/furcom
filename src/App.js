@@ -5,7 +5,8 @@ import Label from './Components/Label';
 import News_block from './Components/News_block';
 import Catalogue from './Components/Catalogue';
 import Footer from './Components/Footer';
-import NewCatalog from './Components/NewCatalog'; 
+import NewCatalog from './Components/NewCatalog';
+import Cart from './Components/Cart'; 
 import Style from './Styles/app.module.css';
 import {
   BrowserRouter as Router,
@@ -40,8 +41,8 @@ function App(){
               <Route path='/cat' exact = {true} strict = {true}>
                 <div>Catalogue</div>
               </Route>
-              <Route path='/buy' exact = {true} strict = {true}>
-                <div>Buy</div>
+              <Route path='/cart' exact = {true} strict = {true}>
+                <Cart></Cart>
               </Route>
               <Route path='/contact' exact = {true} strict = {true}>
                 <div>Contact</div>

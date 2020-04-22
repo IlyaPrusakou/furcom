@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import styled from 'styled-components';
 
-const label_array = [{text:'о нас', path:'about'},{text:'каталог', path:'cat'},{text:'корзина', path:'buy'},{text:'контакты', path:'contact'}];
+const label_array = [{text:'о нас', path:'about'},{text:'каталог', path:'cat'},{text:'корзина', path:'cart'},{text:'контакты', path:'contact'}];
 
 function Head_menu() {
   return (
