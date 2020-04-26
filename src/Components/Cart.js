@@ -2,6 +2,7 @@ import React from 'react';
 import BreadCrumbs from './BreadCrumbs';
 import Flow from './Flow';
 import CartTable from './CartTable';
+import CartButtonGroup from "./CartButtonGroup";
 import styled from 'styled-components';
 
 const CartLabel = styled.div`
@@ -18,7 +19,7 @@ function Cart(props){
             <Flow></Flow>
             <CartLabel>Корзина покупателя</CartLabel>
             <CartTable></CartTable>
-            <div>CartButtonGroup</div>
+            <CartButtonGroup></CartButtonGroup>
         </div>
     );
 }

@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import Checkbox from './CheckBox';
 
 const TableDiv = styled.div`
-	margin: 10px 70px 70px;
+	margin: 10px 70px 10px 70px;
 	box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
 	@media (max-width: 767px) {
 		&:before{
@@ -158,8 +159,8 @@ function CartTable(props){
             		<Td>Content 1</Td>
             		<Td>Content 1</Td>
             		<Td>Content 1</Td>
-					<Td>Content 1</Td>
-            		<Td>Content 1</Td>
+					<Td><Checkbox></Checkbox></Td>
+            		<Td><Checkbox></Checkbox></Td>
         		</Tr>
         		<Tr>
             		<Td>Content 2</Td>
@@ -167,8 +168,8 @@ function CartTable(props){
             		<Td>Content 2</Td>
             		<Td>Content 2</Td>
             		<Td>Content 2</Td>
-					<Td>Content 2</Td>
-            		<Td>Content 2</Td>
+					<Td><Checkbox></Checkbox></Td>
+            		<Td><Checkbox></Checkbox></Td>
         		</Tr>
         		<Tr>
             		<Td>Content 3</Td>
@@ -176,8 +177,8 @@ function CartTable(props){
             		<Td>Content 3</Td>
             		<Td>Content 3</Td>
             		<Td>Content 3</Td>
-					<Td>Content 3</Td>
-            		<Td>Content 3</Td>
+					<Td><Checkbox></Checkbox></Td>
+            		<Td><Checkbox></Checkbox></Td>
         		</Tr>
         		<Tr>
             		<Td>Content 4</Td>
@@ -185,8 +186,8 @@ function CartTable(props){
             		<Td>Content 4</Td>
             		<Td>Content 4</Td>
             		<Td>Content 4</Td>
-					<Td>Content 4</Td>
-            		<Td>Content 4</Td>
+					<Td><Checkbox></Checkbox></Td>
+            		<Td><Checkbox></Checkbox></Td>
         		</Tr>
         		<Tr>
             		<Td>Content 5</Td>
@@ -194,8 +195,8 @@ function CartTable(props){
             		<Td>Content 5</Td>
             		<Td>Content 5</Td>
             		<Td>Content 5</Td>
-					<Td>Content 5</Td>
-            		<Td>Content 5</Td>
+					<Td><Checkbox></Checkbox></Td>
+            		<Td><Checkbox></Checkbox></Td>
         		</Tr>
         		<Tr>
             		<Td>Content 6</Td>
@@ -203,8 +204,8 @@ function CartTable(props){
             		<Td>Content 6</Td>
            	 		<Td>Content 6</Td>
             		<Td>Content 6</Td>
-					<Td>Content 6</Td>
-            		<Td>Content 6</Td>
+					<Td><Checkbox></Checkbox></Td>
+            		<Td><Checkbox></Checkbox></Td>
         		</Tr>
         		<Tr>
             		<Td>Content 7</Td>
@@ -212,8 +213,8 @@ function CartTable(props){
             		<Td>Content 7</Td>
             		<Td>Content 7</Td>
             		<Td>Content 7</Td>
-					<Td>Content 7</Td>
-            		<Td>Content 7</Td>
+					<Td><Checkbox></Checkbox></Td>
+            		<Td><Checkbox></Checkbox></Td>
         		</Tr>
         		<Tr>
             		<Td>Content 8</Td>
@@ -221,8 +222,8 @@ function CartTable(props){
             		<Td>Content 8</Td>
             		<Td>Content 8</Td>
            			<Td>Content 8</Td>
-					<Td>Content 8</Td>
-            		<Td>Content 8</Td>
+					<Td><Checkbox></Checkbox></Td>
+            		<Td><Checkbox></Checkbox></Td>
         		</Tr>
         		<Tr>
             		<Td>Content 9</Td>
@@ -230,8 +231,8 @@ function CartTable(props){
             		<Td>Content 9</Td>
             		<Td>Content 9</Td>
             		<Td>Content 9</Td>
-					<Td>Content 9</Td>
-            		<Td>Content 9</Td>
+					<Td><Checkbox></Checkbox></Td>
+            		<Td><Checkbox></Checkbox></Td>
         		</Tr>
         		<Tr>
             		<Td>Content 10</Td>
@@ -239,8 +240,8 @@ function CartTable(props){
             		<Td>Content 10</Td>
             		<Td>Content 10</Td>
             		<Td>Content 10</Td>
-					<Td>Content 10</Td>
-            		<Td>Content 10</Td>
+					<Td><Checkbox></Checkbox></Td>
+            		<Td><Checkbox></Checkbox></Td>
         		</Tr>
         	</Tbody>
     	</Table>
