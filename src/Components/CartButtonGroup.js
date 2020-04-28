@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
 
@@ -26,11 +27,21 @@ const ChangeButton = styled(ButtonBase).attrs({type:'button', value:'Измен�
 `;
 
 
+const ConfButton = styled(Link)`
+    text-align: center;
+    width: 45%;
+    background-color: black;
+    color: white;
+    margin: auto;
+    border: none;
+    font-family: 'Roboto Thin';
+`;
+
 
 function CartButtonGroup(props) {
     return(
         <Container>
-            <ConfirmButton></ConfirmButton>
+            <ConfButton to='/conf'>Оформить заказ</ConfButton>
             <DeleteButton></DeleteButton>
             <ChangeButton></ChangeButton>
         </Container>
