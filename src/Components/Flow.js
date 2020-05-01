@@ -21,13 +21,21 @@ transform: translate(-50%, -50%);
 width: 60px;
 height: 60px;
 border: solid black;
-background-color: white;
-color: black;
-text-align: center;
-&:hover{
-    background-color: black;
-    color: white;
+background-color: ${
+    props => {
+        let Bgcolor;
+        Bgcolor = (props.second) ? 'black' : 'white';
+        return Bgcolor;
+    }
 };
+color:${
+    props => {
+        let color;
+        color = (props.second) ? 'white' : 'black';
+        return color;
+    }
+};
+text-align: center;
 `;
 const LeftSquare = styled.div`
 position: absolute;
@@ -37,11 +45,19 @@ transform: translate( 0%, -50%);
 width: 60px;
 height: 60px;
 border: solid black;
-background-color: white;
-color: black;
-&:hover{
-    background-color: black;
-    color: white;
+background-color: ${
+    props => {
+        let Bgcolor;
+        Bgcolor = (props.first) ? 'black' : 'white';
+        return Bgcolor;
+    }
+};
+color:  ${
+    props => {
+        let color;
+        color = (props.first) ? 'white' : 'black';
+        return color;
+    }
 };
 `;
 const RightSquare = styled.div`
@@ -52,11 +68,19 @@ transform: translate( 0%, -50%);
 width: 60px;
 height: 60px;
 border: solid black;
-background-color: white;
-color: black;
-&:hover{
-    background-color: black;
-    color: white;
+background-color: ${
+    props => {
+        let Bgcolor;
+        Bgcolor = (props.third) ? 'black' : 'white';
+        return Bgcolor;
+    }
+};
+color: ${
+    props => {
+        let color;
+        color = (props.third) ? 'white' : 'black';
+        return color;
+    }
 };
 `;
 
@@ -85,30 +109,27 @@ const StyledP = styled.p`
     font-family: 'Roboto';
     font-size: 1.5rem;
     text-align: center;
-    color: black;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    &:hover{
-        color: white;
-    };
 `;
 
 function Flow(props){
+
     return (
         <Container>
             <InnerContainer>
                 <LeftBorder></LeftBorder>
                 <Line></Line>
                 <LeftBorder></LeftBorder>
-                <LeftSquare>
+                <LeftSquare first = {props.first}>
                     <StyledP>1</StyledP>
                 </LeftSquare>
-                <Square>
+                <Square second = {props.second}>
                     <StyledP>2</StyledP>
                 </Square>
-                <RightSquare>
+                <RightSquare third = {props.third}>
                     <StyledP>3</StyledP>
                 </RightSquare>
             </InnerContainer>

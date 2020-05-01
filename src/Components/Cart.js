@@ -10,13 +10,13 @@ const CartLabel = styled.div`
     font-size: 1.5rem;
     color: black;
 `;
-
+const colors = {first: true, second: false, third: false};
 
 function Cart(props){
     return(
         <div>
             <BreadCrumbs></BreadCrumbs>
-            <Flow></Flow>
+            <Flow {...colors}></Flow>
             <CartLabel>Корзина покупателя</CartLabel>
             <CartTable></CartTable>
             <CartButtonGroup></CartButtonGroup>

@@ -3,49 +3,47 @@ import Styles from '../Styles/сl_css_menu_item.module.css';
 import styled from 'styled-components';
 import  { Link } from "react-router-dom";
 
-const StyledP = styled.p`
+const StyledP = styled.div`
+
 position:relative;
 top:50%;
 left:50%;
 transform: translate(-50%, -50%);
-`;
 
-const StyledLink = styled.div`
-display: inline;
-transition: .5s ease;
+
+
 color: white;
-border-bottom-style: solid;
-border-color: black;
-border-width: 0.5px;
-padding-bottom: 0.3vw;
+
 font-family: 'Roboto Thin';
 white-space: nowrap;
-&:hover {
-    border-color: white;
-    text-decoration: none;
-    color: white;
+
+& a {
+  transition: .5s ease;
+  padding-bottom: 0.3vw;
 }
-a:link {
+
+& a:link {
     text-decoration: none;
   }
   
-a:visited {
+& a:visited {
     text-decoration: none;
   }
   
-a:hover {
+& a:hover {
     text-decoration: none;
+    border-bottom-style: solid;
+    border-color: white;
+    border-width: 0.5px;
   }
   
-a:active {
+& a:active {
     text-decoration: none;
   }
 `;
 
-
-
 function Menu_item(props) {
-return  ( <StyledP><StyledLink><Link to={props.cont.path}>{props.cont.text}</Link></StyledLink></StyledP> );
+return  ( <StyledP><Link to={props.cont.path} style = {{color:'white'}}>{props.cont.text}</Link></StyledP> );
 };
 
 export default Menu_item;

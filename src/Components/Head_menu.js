@@ -7,21 +7,28 @@ import Col from 'react-bootstrap/Col';
 import styled from 'styled-components';
 
 const label_array = [{text:'о нас', path:'about'},{text:'каталог', path:'cat'},{text:'корзина', path:'cart'},{text:'контакты', path:'contact'}];
+const style = {
+position:'relative',
+top:'50%',
+left:'50%',
+transform: 'translate(-50%, -50%)'
+}
+
 
 function Head_menu() {
   return (
     <Container>
-      <Row style = {{width:'100%', flexWrap: 'nowrap'}}>
-        <Col lg = {2}>
+      <Row style = {{width:'100%', flexWrap: 'nowrap', height:'100%'}}>
+        <Col lg = {2} >
         <Menu_item cont = { label_array[0] }></Menu_item>
         </Col>
-        <Col lg = {2}>
+        <Col lg = {2} >
         <Menu_item cont = { label_array[1] }></Menu_item>
         </Col>
-        <Col lg = {2}>
+        <Col lg = {2} >
         <Menu_item cont = { label_array[2] }></Menu_item>
         </Col>
-        <Col lg = {2}>
+        <Col lg = {2} >
         <Menu_item cont = { label_array[3] }></Menu_item>
         </Col>
       </Row>
