@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {Store, ValueContext} from './Context/ValueContext'; 
 import Header from './Components/Header';
 import Slideshow from './Components/Slide';
 import Label from './Components/Label';
@@ -13,17 +14,26 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
-} from "react-router-dom";
-/*import Slide_container from './Components/Slide_container';
-import Head_menu from './Components/Head_menu'*/        
+  Link,
+  useHistory
+} from "react-router-dom";       
 
 const from_news_top_object =  '400px';
 const from_catal_top_object =  '1000px';
 
-
 function App(){
+
+  const setChildValues = (childValues) => {
+    setState(childValues);
+  };
+  
+  const [state, setState] = useState({
+    values: "initial",
+    toggle: setChildValues
+  });
+  
   return (
+    <ValueContext.Provider value = {state}>
       <div style = {{width:'90%', position:'relative', left:'50%', transform: 'translate(-50%)'}}>
         <Router>
           <div className = { Style.flex_container }>
@@ -51,11 +61,21 @@ function App(){
               <Route path='/contact' exact = {true} strict = {true}>
                 <div>Contact</div>
               </Route>
+              <Route path='/end' exact = {true} strict = {true}>
+                <div>end</div>
+                <div>{state.values.name}</div>
+                <div>{state.values.phone}</div>
+                <div>{state.values.email}</div>
+                <div>{state.values.pay}</div>
+                <div>{state.values.area}</div>
+              </Route>
           </div>
           </div>
               <Footer className = { Style.flex_footer } />
         </Router>
-      </div>);
+      </div>
+      </ValueContext.Provider>
+      );
 }
 
 export default App;

@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Formik } from 'formik';
 import styled from 'styled-components';
+import { useHistory } from "react-router-dom";
+import {ValueContext} from '../Context/ValueContext'; 
 
 const InputText = styled.input.attrs(props => {
 
@@ -44,19 +46,30 @@ const CheckBoxInput = styled.input.attrs(
     height: 18px;
 `;
 
-let initialValues ={ name: 'testname', phone: 'testphone', email: 'testemail', pay: '2', delivery: '2', check: false, area:'area' };
+let initialValues ={ name: 'testname12', phone: 'testphone', email: 'testemail', pay: '2', delivery: '2', check: false, area:'area' };
 
-let onSubmit = (values,  actions ) => {
-    setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
-      actions.setSubmitting(false);
-    }, 1000); }
+
 
 
 function ConfFormPers(props){
+
+    let history = useHistory();
+    let context = useContext(ValueContext);
+
+    let onSubmit = (values,  actions ) => {
+        actions.setSubmitting(false);
+          context.toggle({
+            values: values,
+            toggle: context.toggle
+          });
+          history.push('/end');
+         }
+     
     return (
         <Formik  initialValues={initialValues} onSubmit = {onSubmit}>
-        { ( formikprops ) => (<form onSubmit = {formikprops.handleSubmit}>
+        { ( formikprops ) => { 
+           
+        return <form onSubmit = {formikprops.handleSubmit}>
         <legend>Данные клиента</legend>
         <FieldSet>
             <div>
@@ -108,9 +121,12 @@ function ConfFormPers(props){
             <button type="submit">
             Submit
           </button>
-            </form>) }
+            </form>}
+             }
     </Formik>
+
     );
+   
 }
 
 export default ConfFormPers;

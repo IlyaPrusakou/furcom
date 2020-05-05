@@ -13,6 +13,7 @@ const CartLabel = styled.div`
 const colors = {first: true, second: false, third: false};
 
 function Cart(props){
+
     return(
         <div>
             <BreadCrumbs></BreadCrumbs>

@@ -12,30 +12,39 @@ const TextDiv = styled.div`
 const ActionButtonPers = styled.input.attrs({type: 'button'})`
 
 `;
+
 const colors = {first: false, second: true, third: false};
 
 function Confirm(props) {
 
-    let Form = '';
-
     const [type, setType] = useState('pers');
-
+    
     if (type === 'pers') {
-        Form = <ConfFormPers/>
+        
+        return (
+            <div>
+                <Flow {...colors}></Flow>
+                <TextDiv>Оформить заказ</TextDiv>
+                <ActionButtonPers value = 'Юридическое лицо' onClick={() => setType('comp')}></ActionButtonPers>
+                <ActionButtonPers value = 'Физическое лицо' onClick={() => setType('pers')}></ActionButtonPers>
+                <ConfFormPers />
+            </div>
+        );
+
     } 
     else if(type === 'comp') {
-        Form = <ConfFormComp/>
-    } 
-
-    return (
-        <div>
-            <Flow {...colors}></Flow>
-            <TextDiv>Оформить заказ</TextDiv>
-            <ActionButtonPers value = 'Юридическое лицо' onClick={() => setType('comp')}></ActionButtonPers>
-            <ActionButtonPers value = 'Физическое лицо' onClick={() => setType('pers')}></ActionButtonPers>
-            {Form}
-        </div>
-    );
+        return (
+            <div>
+                <Flow {...colors}></Flow>
+                <TextDiv>Оформить заказ</TextDiv>
+                <ActionButtonPers value = 'Юридическое лицо' onClick={() => setType('comp')}></ActionButtonPers>
+                <ActionButtonPers value = 'Физическое лицо' onClick={() => setType('pers')}></ActionButtonPers>
+                <ConfFormComp />
+            </div>
+        );
+    }
+    
+    
 }        
 
 
